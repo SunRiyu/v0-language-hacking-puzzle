@@ -18,7 +18,7 @@ export default function HomePage() {
             </div>
             <Link href="/game">
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                Start Playing
+                ゲーム開始
               </Button>
             </Link>
           </div>
@@ -29,15 +29,15 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold text-foreground mb-4">
-            Unlock Ancient Languages
+            古代言語を解放しましょう
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Solve linguistic puzzles and discover the secrets of forgotten languages. 
-            From translations to cipher breaking, challenge yourself with puzzles of increasing difficulty.
+            言語学パズルを解いて、失われた言語の秘密を発見しましょう。
+            翻訳から暗号解読まで、難易度が上がるパズルに挑戦してください。
           </p>
           <Link href="/game">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Begin Your Journey
+              旅を始める
             </Button>
           </Link>
         </div>
@@ -49,11 +49,11 @@ export default function HomePage() {
               <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
                 <BookOpen className="w-6 h-6 text-primary" />
               </div>
-              <CardTitle>Multiple Languages</CardTitle>
+              <CardTitle>複数の言語</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                Explore puzzles across 5+ ancient and constructed languages
+                5以上の古代言語と人工言語のパズルを探索
               </p>
             </CardContent>
           </Card>
@@ -63,11 +63,11 @@ export default function HomePage() {
               <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-secondary/20 mb-4">
                 <Zap className="w-6 h-6 text-secondary" />
               </div>
-              <CardTitle>Skill Building</CardTitle>
+              <CardTitle>スキル習得</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                Master translation, decipherment, grammar, and literary puzzles
+                翻訳、解読、文法、文献パズルをマスター
               </p>
             </CardContent>
           </Card>
@@ -77,11 +77,11 @@ export default function HomePage() {
               <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-accent/20 mb-4">
                 <Brain className="w-6 h-6 text-accent" />
               </div>
-              <CardTitle>AI Explanations</CardTitle>
+              <CardTitle>AI解説</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                Get detailed AI-powered linguistic explanations for each puzzle
+                各パズルの詳細なAI駆動言語学的解説
               </p>
             </CardContent>
           </Card>
@@ -91,11 +91,11 @@ export default function HomePage() {
               <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-destructive/10 mb-4">
                 <Globe className="w-6 h-6 text-destructive" />
               </div>
-              <CardTitle>Progressive Unlock</CardTitle>
+              <CardTitle>段階的解放</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                Unlock new languages and difficulties as you progress
+                進行に応じて新しい言語と難易度をアンロック
               </p>
             </CardContent>
           </Card>
@@ -105,45 +105,45 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <Card className="lg:col-span-2">
             <CardHeader>
-              <CardTitle className="text-2xl">Game Features</CardTitle>
-              <CardDescription>What you'll experience in Go-gen</CardDescription>
+              <CardTitle className="text-2xl">ゲーム機能</CardTitle>
+              <CardDescription>Go-genで体験できること</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
                     <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary text-sm">1</span>
-                    Translation Puzzles
+                    翻訳パズル
                   </h4>
                   <p className="text-muted-foreground text-sm">
-                    Translate ancient texts into modern English. Test your understanding of linguistic patterns and vocabulary.
+                    古代のテキストを現代日本語に翻訳してください。言語学的パターンと語彙の理解をテストします。
                   </p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
                     <span className="flex items-center justify-center w-6 h-6 rounded-full bg-secondary/20 text-secondary text-sm">2</span>
-                    Decipherment
+                    解読パズル
                   </h4>
                   <p className="text-muted-foreground text-sm">
-                    Crack encoded messages and substitution ciphers. Use cryptographic knowledge to reveal hidden meanings.
+                    エンコードされたメッセージと置換暗号を破ります。暗号化の知識を使って隠された意味を明かしてください。
                   </p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
                     <span className="flex items-center justify-center w-6 h-6 rounded-full bg-accent/20 text-accent text-sm">3</span>
-                    Grammar Patterns
+                    文法パターン
                   </h4>
                   <p className="text-muted-foreground text-sm">
-                    Master grammatical structures. Identify patterns and rules from linguistic examples.
+                    文法構造をマスターしてください。言語学的例からパターンとルールを識別します。
                   </p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
                     <span className="flex items-center justify-center w-6 h-6 rounded-full bg-destructive/20 text-destructive text-sm">4</span>
-                    Literary Quotes
+                    文献引用
                   </h4>
                   <p className="text-muted-foreground text-sm">
-                    Complete famous quotations in ancient languages. Test your knowledge of historical texts.
+                    古代言語の有名な引用句を完成させてください。歴史的テキストの知識をテストします。
                   </p>
                 </div>
               </div>
@@ -156,11 +156,11 @@ export default function HomePage() {
           <Card className="bg-gradient-to-r from-primary to-accent border-0">
             <CardContent className="py-12">
               <h3 className="text-2xl font-bold text-primary-foreground mb-4">
-                Ready to become a master linguist?
+                言語学の達人になる準備はできていますか？
               </h3>
               <Link href="/game">
                 <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary/20">
-                  Start Playing Now
+                  今すぐプレイ
                 </Button>
               </Link>
             </CardContent>
@@ -172,7 +172,7 @@ export default function HomePage() {
       <footer className="border-t border-border bg-card mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <p className="text-center text-muted-foreground text-sm">
-            Go-gen © 2025. An ancient language puzzle game.
+            Go-gen © 2025. 古代言語パズルゲーム。
           </p>
         </div>
       </footer>

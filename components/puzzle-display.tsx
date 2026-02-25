@@ -37,10 +37,10 @@ export const PuzzleDisplay: React.FC<PuzzleDisplayProps> = ({
 
   const getPuzzleTypeLabel = (type: string) => {
     const labels: Record<string, string> = {
-      translation: 'Translation',
-      decipherment: 'Decipherment',
-      grammar: 'Grammar',
-      quotation: 'Quotation',
+      translation: '翻訳',
+      decipherment: '解読',
+      grammar: '文法',
+      quotation: '引用',
     };
     return labels[type] || type;
   };
@@ -55,17 +55,17 @@ export const PuzzleDisplay: React.FC<PuzzleDisplayProps> = ({
           </div>
           <div className="flex gap-2">
             <Badge className={getDifficultyColor(puzzle.difficulty)}>
-              Difficulty {puzzle.difficulty}/5
+              難易度 {puzzle.difficulty}/5
             </Badge>
             <Badge variant="outline">{getPuzzleTypeLabel(puzzle.type)}</Badge>
-            {completed && <Badge className="bg-green-600">✓ Solved</Badge>}
+            {completed && <Badge className="bg-green-600">✓ 解いた</Badge>}
           </div>
         </div>
       </CardHeader>
       <CardContent className="space-y-6">
         {/* Puzzle Question */}
         <div>
-          <h3 className="font-semibold text-lg mb-3">Puzzle</h3>
+          <h3 className="font-semibold text-lg mb-3">問題</h3>
           <div className="bg-slate-100 p-6 rounded-lg border-2 border-slate-300 min-h-24 flex items-center justify-center">
             <p className="text-center text-lg font-mono">{puzzle.question}</p>
           </div>
@@ -76,13 +76,13 @@ export const PuzzleDisplay: React.FC<PuzzleDisplayProps> = ({
           <div>
             <h3 className="font-semibold text-lg mb-3 flex items-center gap-2">
               <AlertCircle className="w-5 h-5" />
-              Hints
+              ヒント
             </h3>
             <div className="space-y-2">
               {hints.map((hint, index) => (
                 <div key={index} className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded">
                   <p className="text-sm text-amber-900">
-                    <span className="font-semibold">Hint {index + 1}:</span> {hint}
+                    <span className="font-semibold">ヒント {index + 1}:</span> {hint}
                   </p>
                 </div>
               ))}
@@ -93,8 +93,8 @@ export const PuzzleDisplay: React.FC<PuzzleDisplayProps> = ({
         {/* Completed State */}
         {completed && (
           <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded">
-            <p className="text-green-900 font-medium">✓ Puzzle Completed!</p>
-            <p className="text-green-800 text-sm mt-1">Great job! Ask for an AI explanation to learn more.</p>
+            <p className="text-green-900 font-medium">✓ パズルを解きました！</p>
+            <p className="text-green-800 text-sm mt-1">素晴らしい！さらに詳しく学ぶために、AI解説を読んでください。</p>
           </div>
         )}
       </CardContent>

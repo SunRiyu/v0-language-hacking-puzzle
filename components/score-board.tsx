@@ -22,13 +22,13 @@ export const ScoreBoard: React.FC<ScoreBoardProps> = ({
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-lg">
           <Trophy className="w-5 h-5" />
-          Stats
+          統計
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         {/* Level */}
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-700">Level</span>
+          <span className="text-sm font-medium text-gray-700">レベル</span>
           <Badge className="bg-purple-600 text-lg px-3 py-1">{level}</Badge>
         </div>
 
@@ -36,7 +36,7 @@ export const ScoreBoard: React.FC<ScoreBoardProps> = ({
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Zap className="w-4 h-4 text-yellow-500" />
-            <span className="text-sm font-medium text-gray-700">Score</span>
+            <span className="text-sm font-medium text-gray-700">スコア</span>
           </div>
           <span className="font-bold text-lg">{totalScore}</span>
         </div>
@@ -45,7 +45,7 @@ export const ScoreBoard: React.FC<ScoreBoardProps> = ({
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Flame className="w-4 h-4 text-orange-500" />
-            <span className="text-sm font-medium text-gray-700">Solved</span>
+            <span className="text-sm font-medium text-gray-700">解いた</span>
           </div>
           <span className="font-bold text-lg">{completedPuzzles}/{totalPuzzles}</span>
         </div>
@@ -53,7 +53,7 @@ export const ScoreBoard: React.FC<ScoreBoardProps> = ({
         {/* Efficiency */}
         <div className="bg-blue-50 p-3 rounded-lg">
           <p className="text-xs font-medium text-blue-900">
-            Keep solving puzzles to unlock more languages and increase your level!
+            パズルを解いて、新しい言語をアンロックし、レベルを上げましょう！
           </p>
         </div>
       </CardContent>

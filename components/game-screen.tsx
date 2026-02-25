@@ -120,10 +120,10 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       <div className="flex items-center justify-center h-screen bg-slate-50">
         <Card>
           <CardHeader>
-            <CardTitle>Welcome to Go-gen</CardTitle>
+            <CardTitle>Go-genへようこそ</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-gray-600">Loading game data...</p>
+            <p className="text-gray-600">ゲームデータを読み込み中...</p>
           </CardContent>
         </Card>
       </div>
@@ -139,7 +139,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           <CardHeader className="pb-3">
             <CardTitle className="flex items-center gap-2">
               <BookOpen className="w-5 h-5" />
-              Languages
+              言語
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -178,17 +178,17 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         {!completedPuzzles.has(currentPuzzleId) && (
           <Card>
             <CardHeader>
-              <CardTitle>Your Answer</CardTitle>
-              <CardDescription>Attempts: {attempts}</CardDescription>
+              <CardTitle>あなたの答え</CardTitle>
+              <CardDescription>試行回数: {attempts}</CardDescription>
             </CardHeader>
             <CardContent className="flex gap-2">
               <Input
                 value={userAnswer}
                 onChange={e => setUserAnswer(e.target.value)}
-                placeholder="Enter your answer..."
+                placeholder="答えを入力..."
                 onKeyPress={e => e.key === 'Enter' && handleSubmitAnswer()}
               />
-              <Button onClick={handleSubmitAnswer}>Submit</Button>
+              <Button onClick={handleSubmitAnswer}>送信</Button>
               {hintsUsed < currentPuzzle.hints.length && (
                 <Button
                   variant="outline"
@@ -196,7 +196,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   className="flex items-center gap-2"
                 >
                   <Lightbulb className="w-4 h-4" />
-                  Hint
+                  ヒント
                 </Button>
               )}
             </CardContent>
@@ -236,7 +236,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         {/* Puzzle List */}
         <Card className="flex-1 overflow-hidden">
           <CardHeader className="pb-3">
-            <CardTitle className="text-lg">Puzzles</CardTitle>
+            <CardTitle className="text-lg">パズル一覧</CardTitle>
           </CardHeader>
           <CardContent className="overflow-auto h-full">
             <div className="space-y-2">
@@ -253,14 +253,14 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="font-medium">Puzzle {puzzle.id}</span>
+                    <span className="font-medium">パズル {puzzle.id}</span>
                     <Badge
                       variant="secondary"
                       className={`text-xs ${
                         puzzle.difficulty >= 4 ? 'bg-red-200' : puzzle.difficulty === 3 ? 'bg-orange-200' : 'bg-blue-200'
                       }`}
                     >
-                      Lvl {puzzle.difficulty}
+                      Lv {puzzle.difficulty}
                     </Badge>
                   </div>
                 </button>

@@ -65,7 +65,7 @@ export default function GamePage() {
       <div className="flex items-center justify-center h-screen">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Go-gen</h1>
-          <p className="text-gray-600">Loading...</p>
+          <p className="text-gray-600">ゲームを準備中...</p>
         </div>
       </div>
     );

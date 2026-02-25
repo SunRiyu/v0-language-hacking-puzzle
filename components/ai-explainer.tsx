@@ -75,7 +75,7 @@ export const AIExplainer: React.FC<AIExplainerProps> = ({
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-amber-900">
           <Lightbulb className="w-5 h-5 text-amber-600" />
-          AI Explanation
+          AI解説
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -89,7 +89,7 @@ export const AIExplainer: React.FC<AIExplainerProps> = ({
 
         {error && (
           <div className="text-red-600 text-sm">
-            <p className="font-semibold">Error loading explanation</p>
+            <p className="font-semibold">解説の読み込みに失敗しました</p>
             <p>{error}</p>
           </div>
         )}

@@ -25,14 +25,14 @@ export const DexDisplay: React.FC<DexDisplayProps> = ({
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-lg">
           <BookMarked className="w-5 h-5" />
-          Dex
+          図鑑
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         {/* Progress */}
         <div>
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium">Completion</span>
+            <span className="text-sm font-medium">進捗</span>
             <span className="text-sm text-gray-600">{completedCount}/{totalCount}</span>
           </div>
           <Progress value={completionPercentage} className="h-2" />
@@ -40,7 +40,7 @@ export const DexDisplay: React.FC<DexDisplayProps> = ({
 
         {/* Language Status */}
         <div className="space-y-2">
-          <h4 className="text-sm font-semibold text-gray-700">Languages</h4>
+          <h4 className="text-sm font-semibold text-gray-700">言語</h4>
           {languages.map(lang => (
             <div key={lang.id} className="flex items-center gap-2">
               <div
@@ -50,11 +50,11 @@ export const DexDisplay: React.FC<DexDisplayProps> = ({
               <span className="text-sm font-medium flex-1">{lang.native_name}</span>
               {unlockedLanguages.has(lang.id) ? (
                 <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
-                  Unlocked
+                  解放
                 </span>
               ) : (
                 <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
-                  🔒 Locked
+                  🔒 ロック中
                 </span>
               )}
             </div>
