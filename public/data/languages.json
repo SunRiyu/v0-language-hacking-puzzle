@@ -1,0 +1,52 @@
+{
+  "languages": [
+    {
+      "id": "latin",
+      "name": "ラテン語",
+      "nativeName": "Lingua Latina",
+      "description": "古代ローマの公用語。西欧諸言語の多くの基礎となった言語。",
+      "difficulty": 2,
+      "unlockScore": 50,
+      "icon": "🏛️",
+      "region": "Roman Empire",
+      "era": "紀元前8世紀～5世紀",
+      "speakers": "公式な学者や聖職者"
+    },
+    {
+      "id": "greek",
+      "name": "古代ギリシャ語",
+      "nativeName": "Ἑλληνικά",
+      "description": "古代ギリシャの言語。哲学、科学、文学の中心言語。",
+      "difficulty": 3,
+      "unlockScore": 100,
+      "icon": "🏛️",
+      "region": "Ancient Greece",
+      "era": "紀元前8世紀～4世紀",
+      "speakers": "学者、哲学者、劇作家"
+    },
+    {
+      "id": "egyptian",
+      "name": "古代エジプト語",
+      "nativeName": "𓂀 Medu Netjer",
+      "description": "古代エジプトで使用された言語。象形文字で知られている。",
+      "difficulty": 4,
+      "unlockScore": 150,
+      "icon": "🏺",
+      "region": "Ancient Egypt",
+      "era": "紀元前3200年～11世紀",
+      "speakers": "神官、書記、王族"
+    },
+    {
+      "id": "sumerian",
+      "name": "シュメール語",
+      "nativeName": "𒅌𒄀𒀊",
+      "description": "世界最古の言語の一つ。楔形文字で記録された。",
+      "difficulty": 5,
+      "unlockScore": 200,
+      "icon": "📜",
+      "region": "Ancient Mesopotamia",
+      "era": "紀元前3500年～1世紀",
+      "speakers": "古代メソポタミア人"
+    }
+  ]
+}

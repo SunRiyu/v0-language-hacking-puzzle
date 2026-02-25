@@ -1,0 +1,94 @@
+{
+  "puzzles": [
+    {
+      "id": 1,
+      "difficulty": 1,
+      "type": "translation",
+      "title": "古代言語の翻訳 - 基礎",
+      "description": "古代言語から現代日本語に翻訳してください",
+      "question": "\"Solum\" は何を意味するでしょうか？",
+      "options": [
+        { "text": "太陽", "correct": false },
+        { "text": "土地", "correct": true },
+        { "text": "解決", "correct": false },
+        { "text": "孤独", "correct": false }
+      ],
+      "hint": "ラテン語で大地や地面を意味する単語です",
+      "points": 10,
+      "language": "Latin",
+      "explanation": "Solumはラテン語で「土地」や「地面」を意味します。英語の\"soil\"（土壌）の語源でもあります。"
+    },
+    {
+      "id": 2,
+      "difficulty": 1,
+      "type": "decipherment",
+      "title": "文字解読 - シーザー暗号",
+      "description": "シーザー暗号で暗号化されたテキストを解読してください",
+      "question": "次の暗号を解いてください: \"KHOOR\"（シフト: 3）",
+      "options": [
+        { "text": "DELTA", "correct": false },
+        { "text": "HELLO", "correct": true },
+        { "text": "WORLD", "correct": false },
+        { "text": "PEACE", "correct": false }
+      ],
+      "hint": "各文字を3文字前に戻してください",
+      "points": 10,
+      "language": "Cipher",
+      "explanation": "シーザー暗号は各文字をアルファベット上で一定数シフトさせる最古の暗号化方法です。KHOOR → HELLO（各文字を3つ戻す）"
+    },
+    {
+      "id": 3,
+      "difficulty": 2,
+      "type": "pattern",
+      "title": "文法パターン - 古代エジプト語",
+      "description": "古代エジプト語の文法パターンを識別してください",
+      "question": "古代エジプト語で\"Ankh\"は何を表す象形文字でしょうか？",
+      "options": [
+        { "text": "生命", "correct": true },
+        { "text": "死亡", "correct": false },
+        { "text": "光", "correct": false },
+        { "text": "水", "correct": false }
+      ],
+      "hint": "エジプトの十字架として知られています",
+      "points": 15,
+      "language": "Egyptian",
+      "explanation": "Ankh（アンク）はエジプトの十字架として知られ、古代エジプトで「生命」を表す最も重要な象形文字の一つです。"
+    },
+    {
+      "id": 4,
+      "difficulty": 2,
+      "type": "citation",
+      "title": "文献引用 - 古代ギリシャ哲学",
+      "description": "古代ギリシャの哲学者の引用を完成させてください",
+      "question": "プラトンの名言「知識とは____である」を完成させてください",
+      "options": [
+        { "text": "力である", "correct": true },
+        { "text": "美である", "correct": false },
+        { "text": "真実である", "correct": false },
+        { "text": "死である", "correct": false }
+      ],
+      "hint": "\"Knowledge is ____\"という英語表現で知られています",
+      "points": 15,
+      "language": "Greek",
+      "explanation": "\"Knowledge is Power\"はプラトンやベーコンに帰属される有名な哲学的格言です。知識こそが人間の力の源泉だという意味です。"
+    },
+    {
+      "id": 5,
+      "difficulty": 3,
+      "type": "translation",
+      "title": "古代言語の翻訳 - 中級",
+      "description": "複雑なラテン語の句を翻訳してください",
+      "question": "\"Carpe Diem\"はどのような意味でしょうか？",
+      "options": [
+        { "text": "明日に備えよ", "correct": false },
+        { "text": "今を生きよ", "correct": true },
+        { "text": "過去を忘れよ", "correct": false },
+        { "text": "永遠に生きよ", "correct": false }
+      ],
+      "hint": "\"seize the day\"という意味の有名なラテン語です",
+      "points": 20,
+      "language": "Latin",
+      "explanation": "Carpe Diem（カルペ・ディエム）はホラティウスの詩で使われた表現で、「今この瞬間を大切にせよ」という意味です。"
+    }
+  ]
+}

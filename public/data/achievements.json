@@ -1,0 +1,39 @@
+{
+  "achievements": [
+    {
+      "id": "first_puzzle",
+      "name": "言語学者への一歩",
+      "description": "初めてのパズルを解く",
+      "icon": "📖",
+      "unlockedAt": null
+    },
+    {
+      "id": "perfect_score",
+      "name": "完璧な解読",
+      "description": "5つのパズルすべてに正解する",
+      "icon": "⭐",
+      "unlockedAt": null
+    },
+    {
+      "id": "language_master",
+      "name": "言語マスター",
+      "description": "すべての言語を解放する",
+      "icon": "🏆",
+      "unlockedAt": null
+    },
+    {
+      "id": "hint_master",
+      "name": "ヒント達人",
+      "description": "10回ヒントを使用する",
+      "icon": "💡",
+      "unlockedAt": null
+    },
+    {
+      "id": "speed_demon",
+      "name": "速解きの達人",
+      "description": "3分以内にパズルを解く",
+      "icon": "⚡",
+      "unlockedAt": null
+    }
+  ]
+}
