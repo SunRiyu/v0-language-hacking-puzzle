@@ -3,11 +3,12 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables');
-}
+// エラーを throw せず、利用可能かどうかをエクスポートする
+export const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey);
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = isSupabaseConfigured 
+  ? createClient(supabaseUrl!, supabaseAnonKey!) 
+  : null;
 
 // User management
 export const createUserProfile = async (userId: string, username: string, displayName: string) => {
@@ -54,6 +55,11 @@ export const savePuzzleProgress = async (
   hintsUsed: number,
   timeSpentSeconds: number
 ) => {
+  if (!supabase) {
+    console.warn("Supabase is not configured. Skipping savePuzzleProgress.");
+    return { data: null, error: null };
+  }
+
   const { data, error } = await supabase
     .from('user_progress')
     .upsert({
@@ -72,6 +78,11 @@ export const savePuzzleProgress = async (
 };
 
 export const getUserProgress = async (userId: string) => {
+  if (!supabase) {
+    console.warn("Supabase is not configured. Returning empty progress.");
+    return { data: [], error: null };
+  }
+
   const { data, error } = await supabase
     .from('user_progress')
     .select('*')
@@ -86,6 +97,11 @@ export const saveScore = async (
   puzzleId: number,
   score: number
 ) => {
+  if (!supabase) {
+    console.warn("Supabase is not configured. Skipping saveScore.");
+    return { data: null, error: null };
+  }
+
   const { data, error } = await supabase
     .from('user_scores')
     .upsert({
@@ -101,6 +117,11 @@ export const saveScore = async (
 };
 
 export const getUserScores = async (userId: string) => {
+  if (!supabase) {
+    console.warn("Supabase is not configured. Returning empty scores.");
+    return { data: [], error: null };
+  }
+
   const { data, error } = await supabase
     .from('user_scores')
     .select('*')
@@ -111,6 +132,11 @@ export const getUserScores = async (userId: string) => {
 
 // Puzzle unlock management
 export const unlockLanguage = async (userId: string, languageId: string) => {
+  if (!supabase) {
+    console.warn("Supabase is not configured. Skipping unlockLanguage.");
+    return { data: null, error: null };
+  }
+
   const { data, error } = await supabase
     .from('puzzle_unlocks')
     .upsert({
@@ -125,6 +151,11 @@ export const unlockLanguage = async (userId: string, languageId: string) => {
 };
 
 export const getUnlockedLanguages = async (userId: string) => {
+  if (!supabase) {
+    console.warn("Supabase is not configured. Returning empty unlocked languages.");
+    return { data: [], error: null };
+  }
+
   const { data, error } = await supabase
     .from('puzzle_unlocks')
     .select('language_id')
