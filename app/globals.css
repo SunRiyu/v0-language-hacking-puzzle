@@ -1,75 +1,68 @@
-// app/game/page.tsx
-'use client';
+@import 'tailwindcss';
 
-import { useEffect, useState } from 'react';
-import { GameScreen } from '@/components/game-screen';
-import { Puzzle, Language } from '@/lib/game-logic';
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
 
-export default function GamePage() {
-  const [puzzles, setPuzzles] = useState<Puzzle[]>([]);
-  const [languages, setLanguages] = useState<Language[]>([]);
-  const [userId, setUserId] = useState<string>('');
-  const [loading, setLoading] = useState(true);
+  /* Light mode color scheme */
+  --background: oklch(0.98 0.001 0);
+  --foreground: oklch(0.15 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0 0);
+  
+  /* Primary: Deep ocean blue */
+  --primary: oklch(0.42 0.18 247.5);
+  --primary-foreground: oklch(0.98 0 0);
+  
+  /* Secondary: Warm accent */
+  --secondary: oklch(0.75 0.12 70);
+  --secondary-foreground: oklch(0.15 0 0);
+  
+  /* Muted: Soft neutrals */
+  --muted: oklch(0.88 0.01 0);
+  --muted-foreground: oklch(0.52 0 0);
+  
+  /* Accent: Purple */
+  --accent: oklch(0.55 0.2 300);
+  --accent-foreground: oklch(0.98 0 0);
+  
+  /* Destructive: Warm red */
+  --destructive: oklch(0.6 0.22 28);
+  --destructive-foreground: oklch(0.98 0 0);
+  
+  /* Borders and inputs */
+  --border: oklch(0.91 0.01 0);
+  --input: oklch(0.95 0 0);
+  --ring: oklch(0.42 0.18 247.5);
+  
+  /* Chart colors */
+  --chart-1: oklch(0.55 0.2 300);
+  --chart-2: oklch(0.68 0.16 37);
+  --chart-3: oklch(0.42 0.18 247.5);
+  --chart-4: oklch(0.75 0.12 70);
+  --chart-5: oklch(0.65 0.14 120);
+  
+  /* Radius */
+  --radius: 0.5rem;
+  
+  /* Sidebar */
+  --sidebar: oklch(0.98 0.001 0);
+  --sidebar-foreground: oklch(0.15 0 0);
+  --sidebar-primary: oklch(0.42 0.18 247.5);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.55 0.2 300);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(0.91 0.01 0);
+  --sidebar-ring: oklch(0.42 0.18 247.5);
+}
 
-  useEffect(() => {
-    const initializeGame = async () => {
-      try {
-        const [puzzlesRes, languagesRes] = await Promise.all([
-          fetch('/data/puzzles.json'),
-          fetch('/data/languages.json'),
-        ]);
-
-        if (!puzzlesRes.ok || !languagesRes.ok) {
-          throw new Error('JSONデータの読み込みに失敗しました');
-        }
-
-        const puzzlesData = await puzzlesRes.json();
-        const languagesData = await languagesRes.json();
-
-        setPuzzles(puzzlesData);
-        setLanguages(languagesData);
-        setUserId('demo-user-' + Date.now());
-      } catch (error) {
-        console.error('[v0] Initialization error:', error);
-        // エラーが発生しても最低限の空配列を入れて、クラッシュを防ぐ
-        setPuzzles([]);
-        setLanguages([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    initializeGame();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Go-gen</h1>
-          <p className="text-gray-600">ゲームを準備中...</p>
-        </div>
-      </div>
-    );
+@layer base {
+  * {
+    @apply border-border;
   }
-
-  // データがない場合の表示
-  if (puzzles.length === 0 || languages.length === 0) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <p className="text-red-500">データの読み込みに失敗しました。public/data/ 内のファイルを確認してください。</p>
-      </div>
-    );
+  body {
+    @apply bg-background text-foreground;
   }
-
-  return (
-    <GameScreen
-      userId={userId}
-      puzzles={puzzles}
-      languages={languages}
-      onPuzzleComplete={(id, correct, score) => {
-        console.log(`Puzzle ${id} complete: ${correct}, Score: ${score}`);
-      }}
-    />
-  );
 }
